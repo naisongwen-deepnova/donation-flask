@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="author" content="wen naisong">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <link href="/css/search.css" rel="stylesheet" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+    <title>华中科技大学浙江校友会援助武汉捐款人信息查询平台</title>
+  </head>
+
+    <body>
+        <header>
+            <nav class="navbar navbar-dark bg-dark shadow-sm">
+                <div class="container">
+                    <a class="navbar-brand" href="#">
+                        <img src="/images/search.png" width="30" height="30" class="d-inline-block align-top" />
+                        华中科技大学浙江校友会
+                    </a>
+                </div>
+            </nav>
+        </header> 
+
+        <main>
+            <section class="jumbotron text-center not-search">
+                <div class="container">
+                    <h1 class="jumbotron-heading">华中科技大学浙江校友会援助武汉捐款人信息查询</h1>
+                    <!-- 在这里下面添加搜索框 -->
+                    <div class="input-group mt-5 mb-3 position-relative">
+                        <input type="text" id="keyword" class="form-control keyword-input" placeholder="捐款人姓名" autocomplete="off" aria-describedby="button-addon2" />
+                        <div class="input-group-append">
+                        <button id="searchDonation" class="btn btn-outline-secondary px-4" type="button">查询</button>
+                    </div>
+                    <!-- 这里下面放联想提示框 -->
+                   <div id="suggestList" class="list-group position-absolute">
+                    <!-- 每一条结果将会用jQuery插入到这里 -->
+                    </div>
+                </div> 
+            </section>
+            <div id="resultSection" class="py-5 bg-light">
+                <div class="container">
+                    <div class="row" id="result">
+                        <!-- 每一条结果将会用jQuery插入到这里 -->
+                    </div>
+                </div>
+            </div> 
+       </main>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script type=text/javascript src="{{ url_for('static', filename='js/jquery-3.4.1.min.js') }}"></script>
+    <script type=text/javascript src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+    <script type=text/javascript src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script  type=text/javascript src="{{ url_for('static', filename='js/search.js') }}?t=22"></script>
+  </body>
+</html>
