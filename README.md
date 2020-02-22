@@ -109,6 +109,7 @@ sqlite> .import '/Users/naisongwen/武汉捐款详情.csv' donation_info
 sqlite> select * from donation_info limit 10;
 ```
 2. 通过SQLAlchemy 使用
+
 SQLAlchemy 的使用详情参见：https://docs.sqlalchemy.org/en/13/orm/tutorial.html#creating-a-session
 
 #实现sqlite_helper.py
@@ -254,7 +255,10 @@ if __name__ == '__main__':
 ```
 系统部署
 部署通过nginx反向代理到本机 8080端口，本机应用启动命令：
+
+```
 gunicorn -b 0.0.0.0:8080 donation:app
+```
 
 niginx反向代理配置为：
 #/etc/nginx/sites-enabled/proxy.conf
