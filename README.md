@@ -1,7 +1,12 @@
+- ![交互图1](https://github.com/cangqing/donation-flask/blob/master/ui/image1.png)
+- ![交互图2](https://github.com/cangqing/donation-flask/blob/master/ui/image2.png)
+- ![交互图3](https://github.com/cangqing/donation-flask/blob/master/ui/image3.png)
+
 主要交互功能：
 1. 输入捐款人信息 列出查询结果列表；
 2. 输入过程中前端显示联想提示词，选择联想词后自动查询结果；
 3. 从查询结果中查看证书
+
 
 前端UI实现
 
@@ -87,7 +92,7 @@ function getSuggest() {
 
 所需要的信息有：捐款序号（自增ID）、捐款人姓名、捐款人金额、备注和经办人。
 1. 通过sqlite3 控制台使用：
-
+```
 //直接输入数据库文件名，如果没有则创建。
 >>sqlite3 dontion.db
 //查看sqlite支持的命令
@@ -102,7 +107,7 @@ sqlite>.separator ","
 sqlite> .import '/Users/naisongwen/武汉捐款详情.csv' donation_info
 //查询表数据
 sqlite> select * from donation_info limit 10;
-
+```
 2. 通过SQLAlchemy 使用
 SQLAlchemy 的使用详情参见：https://docs.sqlalchemy.org/en/13/orm/tutorial.html#creating-a-session
 
