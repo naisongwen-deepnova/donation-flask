@@ -52,13 +52,13 @@ class Certificate:
         date_font = ImageFont.truetype(font_type,25) 
         # 年
         year=datetime.datetime.now().strftime('%Y')
-        draw.text((647,585), u'%s' % year, color,date_font)
+        draw.text((680,620), u'%s' % year, color,date_font)
         # 月
         month=datetime.datetime.now().strftime('%m')
-        draw.text((752,585), u'%s' % month, color,date_font) 
+        draw.text((782,620), u'%s' % month, color,date_font) 
         # 日
         day=datetime.datetime.now().strftime('%d')
-        draw.text((823,585), u'%s' % day, color, date_font) 
+        draw.text((853,620), u'%s' % day, color, date_font) 
 
         # 生成图片
         image.save('certificates/'+new_img, 'png')
